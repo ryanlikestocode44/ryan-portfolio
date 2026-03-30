@@ -20,7 +20,7 @@ const SkillCard: FC<SkillCardProps> = React.memo(({ skill, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.04 }}
       viewport={{ once: true }}
-      className="group relative overflow-hidden rounded-2xl bg-white/8 backdrop-blur-xl border border-white/20 hover:border-white/40 hover:bg-white/15 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col items-center justify-center p-1 sm:p-2 hover:p-2"
+      className="group relative overflow-hidden rounded-2xl bg-white/8 backdrop-blur-xl border border-white/20 hover:border-white/40 hover:bg-white/15 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center p-1 sm:p-2 hover:p-2"
       role="img"
       aria-label={skill.name}
     >
