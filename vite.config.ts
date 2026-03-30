@@ -11,4 +11,15 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-})
+  assetsInclude: ["**/*.png", "**/*.jpg", "**/*.svg", "**/*.webp", "**/*.ico"],
+  build: {
+    assetsDir: "assets",
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          icons: ["./src/assets/icons/*.png"],
+        },
+      },
+    },
+  },
+});

@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar"
+import Navbar from "@/components/common/Navbar";
 
 const Projects = () => {
   return (
@@ -11,7 +11,7 @@ const Projects = () => {
         {/* Add project details here */}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

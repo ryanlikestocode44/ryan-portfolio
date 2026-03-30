@@ -1,8 +1,8 @@
-import Navbar from '@/components/Navbar'
-import SkillsSection from '@/components/SkillsSection';
-import Banner from '@/components/Banner';
-import ProjectsSection from '@/components/ProjectsSection';
-import ContactSection from '@/components/ContactSection';
+import Navbar from "@/components/common/Navbar";
+import SkillsSection from "@/components/sections/Skills";
+import Banner from "@/components/sections/Hero";
+import ProjectsSection from "@/components/sections/Projects";
+import ContactSection from "@/components/sections/Contact";
 
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
 
       {/* Skills */}
       <SkillsSection />
- 
+
       {/* Projects */}
       <ProjectsSection />
 
@@ -22,6 +22,6 @@ const Home = () => {
       <ContactSection />
     </div>
   );
-}
+};
 
-export default Home
+export default Home;

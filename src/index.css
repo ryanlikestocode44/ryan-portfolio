@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+.skill-sm-card {
+  @apply flex flex-col justify-center rounded-xl shadow-lg border-2 border-gray-300 p-2;
+}
+
+.skill-name {
+  @apply text-center font-semibold text-xl mb-2;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Responsive Hexagon */
+.hexagon-container {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+@media (max-width: 768px) {
+  .hexagon-container {
+    clip-path: polygon(20% 0%, 80% 0%, 100% 35%, 80% 80%, 20% 80%, 0% 35%);
+  }
+}
