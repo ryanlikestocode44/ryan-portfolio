@@ -1,28 +1,7 @@
 import { motion } from "framer-motion";
 import SkillCard from "@/components/ui/SkillCard";
-import { skill_icons } from "@/assets/icons";
-import type { Skill } from "@/components/ui/SkillCard";
+import { skillsData } from "@/data/skills";
 import type { FC } from "react";
-
-const skillsData: Skill[] = [
-  // Row 1: Frontend
-  { name: "HTML5", icon: skill_icons.html },
-  { name: "CSS3", icon: skill_icons.css },
-  { name: "JavaScript", icon: skill_icons.js },
-  { name: "React.js", icon: skill_icons.reactjs },
-  { name: "Tailwind", icon: skill_icons.tailwind },
-  { name: "Bootstrap", icon: skill_icons.bootstrap },
-
-  // Row 2: Backend
-  { name: "Node.js", icon: skill_icons.nodejs },
-  { name: "Express.js", icon: skill_icons.expressjs },
-
-  // Row 3: Design & Tools
-  { name: "Figma", icon: skill_icons.figma },
-  { name: "Photoshop", icon: skill_icons.photoshop },
-  { name: "Canva", icon: skill_icons.canva },
-  { name: "MS Office", icon: skill_icons.msoffice },
-];
 
 const Skills: FC = () => {
   return (
@@ -33,7 +12,7 @@ const Skills: FC = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-[#c2fcf7] to-[#85bdbf] bg-clip-text text-transparent"
+          className="h-[60px] text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-[#c2fcf7] to-[#85bdbf] bg-clip-text text-transparent"
         >
           Tech Stack
         </motion.h2>
@@ -60,7 +39,7 @@ const Skills: FC = () => {
             <h3 className="text-2xl font-bold text-center text-white tracking-tight">
               Frontend
             </h3>
-            <div className="grid grid-cols-4 md:grid-cols-6 mx-auto gap-3">
+            <div className="grid grid-cols-4 md:grid-cols-6 mx-auto gap-6">
               {skillsData.slice(0, 6).map((skill, index) => (
                 <SkillCard key={skill.name} skill={skill} index={index} />
               ))}

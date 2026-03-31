@@ -1,22 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import type { ExperienceCardProps } from "@/types";
 import type { FC } from "react";
-
-interface ExperienceItem {
-  id: number;
-  company: string;
-  position: string;
-  period: string;
-  technologies: string[];
-  description: string;
-  achievements: string[];
-  image: string;
-}
-
-interface ExperienceCardProps {
-  experience: ExperienceItem;
-  index: number;
-}
 
 const ExperienceCard: FC<ExperienceCardProps> = React.memo(
   ({ experience, index }) => {
@@ -72,7 +57,7 @@ const ExperienceCard: FC<ExperienceCardProps> = React.memo(
                 {experience.technologies.slice(0, 4).map((tech, idx) => (
                   <span
                     key={idx}
-                    className="px-2.5 py-1 bg-[#C2FCF7]/20 text-[#85BDBF] text-xs font-medium rounded-lg border border-[#85BDBF]/40 hover:bg-[#C2FCF7]/30 transition-all duration-200"
+                    className="px-5 py-1 bg-[#C2FCF7]/20 text-[#85BDBF] text-sm font-medium rounded-lg border border-[#85BDBF]/40 hover:bg-[#C2FCF7]/30 transition-all duration-200"
                   >
                     {tech}
                   </span>
@@ -104,7 +89,4 @@ const ExperienceCard: FC<ExperienceCardProps> = React.memo(
   },
 );
 
-ExperienceCard.displayName = "ExperienceCard";
-
 export default ExperienceCard;
-export type { ExperienceCardProps, ExperienceItem };

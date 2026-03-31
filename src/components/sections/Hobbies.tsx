@@ -48,7 +48,7 @@ const Hobbies: FC = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold text-center mb-24 bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent"
+          className="section-title"
         >
           Hobbies & Interests
         </motion.h2>

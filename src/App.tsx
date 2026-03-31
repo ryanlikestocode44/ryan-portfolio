@@ -1,5 +1,6 @@
 import React from "react";
 import { useTheme } from "@/hooks/useTheme";
+
 import Navbar from "@/components/common/Navbar";
 import Hero from "@/components/sections/Hero";
 import Education from "@/components/sections/Education";
@@ -9,6 +10,7 @@ import Projects from "@/components/sections/Projects";
 import Hobbies from "@/components/sections/Hobbies";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/common/Footer";
+
 import "@/index.css";
 
 const App: React.FC = () => {

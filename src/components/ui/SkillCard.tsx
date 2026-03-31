@@ -1,17 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import type { FC } from 'react';
-
-interface Skill {
-  name: string;
-  icon: string;
-  category?: 'frontend' | 'backend' | 'design' | 'tools';
-}
-
-interface SkillCardProps {
-  skill: Skill;
-  index: number;
-}
+import React from "react";
+import { motion } from "framer-motion";
+import type { FC } from "react";
+import type { SkillCardProps } from "@/types";
 
 const SkillCard: FC<SkillCardProps> = React.memo(({ skill, index }) => {
   return (
@@ -42,7 +32,4 @@ const SkillCard: FC<SkillCardProps> = React.memo(({ skill, index }) => {
   );
 });
 
-SkillCard.displayName = 'SkillCard';
-
 export default SkillCard;
-export type { SkillCardProps, Skill };
