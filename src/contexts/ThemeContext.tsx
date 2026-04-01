@@ -2,8 +2,8 @@ import React, {
   createContext,
   useState,
   useEffect,
+  type ReactNode, // ✅ FIXED: Explicit import
 } from "react";
-import type { ReactNode } from "react";
 import type { ThemeContextType } from "@/types";
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -12,43 +12,32 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [darkMode, setDarkMode] = useState<boolean>(true);
-  const [mounted, setMounted] = useState(false); // ✅ Hydration fix
+  const [mounted, setMounted] = useState(false);
 
-  // ✅ Mount client-side only
   useEffect(() => {
     setMounted(true);
 
-    // Load from localStorage
-    const saved = localStorage.getItem("darkMode");
-    if (saved !== null) {
-      const shouldBeDark = JSON.parse(saved);
-      setDarkMode(shouldBeDark);
-      applyTheme(shouldBeDark);
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("darkMode");
+      if (saved !== null) {
+        const shouldBeDark = JSON.parse(saved);
+        setDarkMode(shouldBeDark);
+        document.documentElement.classList.toggle("dark", shouldBeDark);
+      }
     }
   }, []);
-
-  const applyTheme = (isDark: boolean) => {
-    if (typeof document === "undefined") return;
-
-    if (isDark) {
-      document.documentElement.classList.add("dark");
-      document.body.classList.add("bg-[#040F0F]");
-      document.body.classList.remove("bg-[#f8fafc]");
-    } else {
-      document.documentElement.classList.remove("dark");
-      document.body.classList.remove("bg-[#040F0F]");
-      document.body.classList.add("bg-[#f8fafc]");
-    }
-  };
 
   const toggleTheme = () => {
     const newDarkMode = !darkMode;
     setDarkMode(newDarkMode);
-    applyTheme(newDarkMode);
+
+    if (typeof document !== "undefined") {
+      document.documentElement.classList.toggle("dark", newDarkMode);
+    }
+
     localStorage.setItem("darkMode", JSON.stringify(newDarkMode));
   };
 
-  // ✅ Don't render until mounted (SSR fix)
   if (!mounted) {
     return <div className="min-h-screen bg-[#040F0F]">{children}</div>;
   }
