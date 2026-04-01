@@ -1,7 +1,10 @@
 import statuskuImg from "@/assets/img/projects/statusku.png";
+import airhopperImg from "@/assets/img/projects/airhopper.png";
+import resumeInsightImg from "@/assets/img/projects/resumeinsight.png";
+
 import type { ProjectItem } from "@/types";
 
-export const projects: ProjectItem[] = [
+export const projectsData: ProjectItem[] = [
   {
     id: 1,
     title: "StatusKu: Jejaring Posting Teks Sederhana",
@@ -16,7 +19,7 @@ export const projects: ProjectItem[] = [
   {
     id: 2,
     title: "AirHopper: Pemesanan Tiket Pesawat",
-    image: "",
+    image: airhopperImg,
     description:
       "AirHopper merupakan website pemesanan tiket pesawat online yang dirancang untuk memberikan pengalaman perjalanan yang mudah dan nyaman. Dengan dukungan teknologi modern seperti React, Chakra UI, dan Vite, kami menyediakan layanan frontend yang cepat, aman, dan dapat diandalkan.",
     technologies: ["React", "Node.js", "Tailwind", "Express", "PostgreSQL"],
@@ -27,7 +30,7 @@ export const projects: ProjectItem[] = [
   {
     id: 3,
     title: "ResumeInsight: Resume Analyzer Berbasis Web",
-    image: "",
+    image: resumeInsightImg,
     description:
       "ResumeInsight adalah aplikasi web yang menganalisis resume pengguna untuk memberikan wawasan tentang kekuatan dan kelemahan mereka. Dengan menggunakan teknologi seperti React, Node.js, dan Python, ResumeInsight mengekstraksi informasi penting dari resume dan menyajikannya dalam format yang mudah dipahami, membantu pengguna meningkatkan peluang mereka dalam pencarian kerja.",
     technologies: [

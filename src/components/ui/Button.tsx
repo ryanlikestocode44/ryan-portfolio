@@ -11,7 +11,7 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseClasses =
-    "font-semibold rounded-2xl shadow-2xl transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-4 font-medium";
+    "cursor-pointer font-semibold rounded-2xl shadow-2xl transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-4 font-medium";
 
   const sizeClasses = {
     sm: "px-4 py-2 text-sm",

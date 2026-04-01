@@ -89,4 +89,6 @@ const ExperienceCard: FC<ExperienceCardProps> = React.memo(
   },
 );
 
+ExperienceCard.displayName = "ExperienceCard";
+
 export default ExperienceCard;

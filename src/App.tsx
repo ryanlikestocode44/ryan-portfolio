@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme } from "@/hooks/useTheme";
+import { ThemeProvider } from "./contexts/ThemeContext";// ✅ Fixed import
 
 import Navbar from "@/components/common/Navbar";
 import Hero from "@/components/sections/Hero";
@@ -10,32 +10,28 @@ import Projects from "@/components/sections/Projects";
 import Hobbies from "@/components/sections/Hobbies";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/common/Footer";
+import ScrollToTop from "@/components/common/ScrollToTop"; // ✅ Add this
 
 import "@/index.css";
 
 const App: React.FC = () => {
-  const { darkMode } = useTheme();
-
   return (
-    <div
-      className={`min-h-screen ${
-        darkMode
-          ? "dark bg-[#040f0f]"
-          : "bg-gradient-to-br from-slate-50 to-blue-50"
-      } transition-all duration-500`}
-    >
-      <Navbar />
-      <main>
-        <Hero />
-        <Education />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Hobbies />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-[#f8fafc] dark:bg-[#040F0F] transition-colors duration-500">
+        <Navbar />
+        <main>
+          <Hero />
+          <Education />
+          <Skills />
+          <Experience />
+          <Projects />
+          <Hobbies />
+          <Contact />
+        </main>
+        <Footer />
+        <ScrollToTop /> {/* Bottom-left */}
+      </div>
+    </ThemeProvider>
   );
 };
 

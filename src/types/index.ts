@@ -1,8 +1,12 @@
+import type { ReactNode } from "react";
+
+// Theme Context
 export interface ThemeContextType {
   darkMode: boolean;
   toggleTheme: () => void;
 }
 
+// Section Names
 export type SectionName =
   | "home"
   | "education"
@@ -12,6 +16,7 @@ export type SectionName =
   | "hobbies"
   | "contact";
 
+// Component Props
 export interface ButtonProps {
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "outline";
@@ -34,6 +39,12 @@ export interface EducationItem {
   description: string;
   image: string;
   side: "left" | "right";
+}
+
+export interface TimelineProps {
+  children: ReactNode;
+  lineColor?: string;
+  className?: string;
 }
 
 export interface EducationCardProps {
@@ -84,9 +95,33 @@ export interface ProjectCardProps {
   index: number;
 }
 
+export interface HobbyItem {
+  title: string;
+  image: string;
+  color: string;
+}
+
+export interface HobbyCardProps {
+  hobby: HobbyItem;
+  index: number;
+}
+
 export interface SocialLink {
   id: number;
-  name: string;
+  label: string;
   url: string;
   icon: React.ComponentType<{ className?: string }>;
+}
+
+export interface ContactItem {
+  icon: React.ComponentType<{ className?: string; size?: number }>;
+  label: string;
+  value: string;
+  href?: string;
+  whatsapp?: boolean;
+}
+
+export interface ContactCardProps {
+  item: ContactItem;
+  index: number;
 }

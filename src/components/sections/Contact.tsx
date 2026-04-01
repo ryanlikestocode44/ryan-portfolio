@@ -1,28 +1,19 @@
 import { motion } from "framer-motion";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-  FaEnvelope,
-  FaPhone,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
 import Button from "@/components/ui/Button";
+import ContactCard from "@/components/ui/ContactCard";
+import { socialsData, contactsData } from "@/data/contacts";
 import type { FC } from "react";
 
 const Contact: FC = () => {
   return (
-    <section
-      id="contact"
-      className="py-32 px-4 bg-gradient-to-b from-slate-900/50 to-transparent"
-    >
-      <div className="max-w-4xl mx-auto text-center">
+    <section id="contact" className="py-32 px-4">
+      <div className="max-w-full mx-auto">
         {/* Header */}
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="section-title"
+          className="h-[60px] text-4xl md:text-5xl font-bold text-center mb-10 md:mb-15 bg-gradient-to-r from-[#C2FCF7] via-[#85BDBF] to-[#57737A] bg-clip-text text-transparent"
         >
           Let's Work Together
         </motion.h2>
@@ -32,16 +23,22 @@ const Contact: FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-xl mb-12 max-w-2xl mx-auto leading-relaxed text-slate-300"
+          className="text-xl mb-10 text-center max-w-full mx-auto leading-relaxed text-slate-300"
         >
           Ready to bring your ideas to life? Let's create something amazing
           together! 🚀
         </motion.p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+        {/* CTA + Social */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="flex flex-col lg:flex-row gap-6 justify-center items-center mb-20"
+        >
           <motion.a
-            href="mailto:ryan@example.com"
+            href="mailto:ryannichpurba44@gmail.com"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -49,57 +46,38 @@ const Contact: FC = () => {
               Get In Touch
             </Button>
           </motion.a>
-          <div className="flex space-x-4">
-            {[
-              { icon: FaGithub, href: "https://github.com/ryan" },
-              { icon: FaLinkedin, href: "https://linkedin.com/in/ryan" },
-              { icon: FaInstagram, href: "https://instagram.com/ryan" },
-            ].map(({ icon: Icon, href }, index) => (
+
+          <div className="flex gap-3">
+            {socialsData.map(({ icon: Icon, url, label }, index) => (
               <motion.a
-                key={href}
-                href={href}
+                key={label}
+                href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                className="p-4 bg-white/10 backdrop-blur-sm rounded-3xl hover:bg-white/20 transition-all duration-300 border border-white/20"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.4 + index * 0.1 }}
+                whileHover={{ scale: 1.15, rotate: 8 }}
+                className="p-3 md:p-4 bg-[#040F0F]/60 backdrop-blur-xl rounded-2xl border border-[#57737A]/50 hover:border-[#C2FCF7]/70 hover:bg-[#040F0F]/80 hover:shadow-[#85BDBF]/30 shadow-lg transition-all duration-300 flex items-center justify-center"
               >
-                <Icon size={28} />
+                <Icon className="text-[#C9FBFF] text-xl md:text-2xl hover:text-[#85BDBF]" />
               </motion.a>
             ))}
           </div>
-        </div>
+        </motion.div>
 
-        {/* Contact Info Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            { icon: FaEnvelope, label: "Email", value: "ryan@example.com" },
-            { icon: FaPhone, label: "Phone", value: "+62 812-3456-7890" },
-            {
-              icon: FaMapMarkerAlt,
-              label: "Location",
-              value: "Jakarta, Indonesia",
-            },
-          ].map(({ icon: Icon, label, value }, index) => (
-            <motion.div
-              key={label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="group bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 cursor-pointer"
-            >
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="p-3 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl">
-                  <Icon className="text-white" size={24} />
-                </div>
-                <h4 className="text-xl font-semibold text-white">{label}</h4>
-              </div>
-              <p className="text-slate-400 group-hover:text-white transition-colors">
-                {value}
-              </p>
-            </motion.div>
+        {/* Contact Info Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
+        >
+          {contactsData.map((item, index) => (
+            <ContactCard key={item.label} item={item} index={index} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
