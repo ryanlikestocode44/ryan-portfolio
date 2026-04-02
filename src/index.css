@@ -1,22 +1,23 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-html.dark body {
-  @apply bg-[#040F0F];
+/* Navbar */
+.navbar {
+  @apply fixed top-0 w-full z-50 backdrop-blur-xl dark:bg-[#040F0F]/95 bg-[#C9FBFF]/80 dark:border-[#57737A]/30 border-b border-[#C2FCF7]/20 shadow-lg shadow-[#040f0f]/20 dark:shadow-[#85BDBF]/10
 }
 
-html:not(.dark) body {
-  @apply bg-[#f8fafc];
+.nav-logo {
+  @apply text-2xl font-bold bg-gradient-to-r from-[#57737a] to-[#040f0f] dark:from-[#85BDBF] dark:to-[#57737A] bg-clip-text text-transparent dark:text-[#C9FBFF]/90
 }
 
 .section-title {
-  @apply h-[60px] text-4xl md:text-5xl font-bold text-center mb-20 md:mb-28 bg-gradient-to-r from-[#C2FCF7] via-[#85BDBF] to-[#57737A] bg-clip-text text-transparent
+  @apply h-[60px] text-4xl md:text-5xl font-bold text-center mb-20 md:mb-28 bg-clip-text text-transparent bg-gradient-to-r from-[#040f0f] to-[#57737a] dark:from-[#c2fcf7] dark:to-[#85bdbf];
 }
 
 .skill-sm-card {
-  @apply flex flex-col justify-center rounded-xl shadow-lg border-2 border-gray-300 p-2;
+  @apply flex flex-col justify-center rounded-xl shadow-lg border-2 p-2;
 }
 
 .skill-name {
   @apply text-center font-semibold text-xl mb-2;
 }
-

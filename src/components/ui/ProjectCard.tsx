@@ -15,7 +15,7 @@ const ProjectCard: FC<ProjectCardProps> = React.memo(({ project, index }) => {
         scale: 1.015,
         boxShadow: "0 15px 35px -10px rgba(197, 251, 255, 0.2)",
       }}
-      className="group relative overflow-hidden rounded-3xl bg-[#040F0F]/60 backdrop-blur-xl border border-[#57737A]/40 hover:border-[#C2FCF7]/60 hover:bg-[#040F0F]/80 shadow-2xl hover:shadow-[#85BDBF]/30 transition-all duration-500 cursor-pointer"
+      className="group relative overflow-hidden rounded-3xl bg-[#040F0F]/60 backdrop-blur-xl border border-[#57737A]/40 hover:border-[#C2FCF7]/60 hover:bg-[#040F0F]/80 shadow-2xl hover:shadow-[#85BDBF]/30 transition-all duration-500"
     >
       {/* IMAGE - TOP (Hero Style) */}
       <div className="relative h-32 md:h-30 lg:h-44 overflow-hidden rounded-t-3xl">

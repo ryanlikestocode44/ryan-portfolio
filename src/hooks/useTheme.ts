@@ -1,11 +1,8 @@
 import { useContext } from "react";
 import { ThemeContext } from "@/contexts/ThemeContext";
-import type { ThemeContextType } from "@/types";
 
-export const useTheme = (): ThemeContextType => {
+export const useTheme = () => {
   const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error("useTheme must be used within ThemeProvider");
-  }
+  if (!context) throw new Error("useTheme: No provider!");
   return context;
 };

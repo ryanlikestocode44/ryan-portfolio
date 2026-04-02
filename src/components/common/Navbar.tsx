@@ -15,13 +15,11 @@ const Navbar: FC = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-[#040F0F]/90 dark:bg-[#040F0F]/95 bg-white/80 dark:border-[#57737A]/30 border-b border-[#C2FCF7]/20 shadow-lg dark:shadow-[#85BDBF]/10">
+    <nav className="navbar">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="text-2xl font-bold bg-gradient-to-r from-[#C9FBFF] to-[#C2FCF7] dark:from-[#85BDBF] dark:to-[#57737A] bg-clip-text text-transparent dark:text-[#C9FBFF]/90">
-            Ryan Portfolio
-          </div>
+          <div className="nav-logo">Ryan Portfolio</div>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex space-x-8">

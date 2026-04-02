@@ -1,6 +1,5 @@
-import React from "react";
-import { ThemeProvider } from "./contexts/ThemeContext";// ✅ Fixed import
-
+import { useRef } from "react";
+import { ThemeProvider } from "@/contexts/ThemeProvider";
 import Navbar from "@/components/common/Navbar";
 import Hero from "@/components/sections/Hero";
 import Education from "@/components/sections/Education";
@@ -10,14 +9,19 @@ import Projects from "@/components/sections/Projects";
 import Hobbies from "@/components/sections/Hobbies";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/common/Footer";
-import ScrollToTop from "@/components/common/ScrollToTop"; // ✅ Add this
-
+import ScrollToTop from "@/components/common/ScrollToTop";
 import "@/index.css";
 
 const App: React.FC = () => {
+  const AppRootRef = useRef<HTMLDivElement>(null);
+
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-[#f8fafc] dark:bg-[#040F0F] transition-colors duration-500">
+      <div
+        ref={AppRootRef}
+        data-theme="light"
+        className="min-h-screen bg-[#C9FBFF] dark:bg-[#040F0F] text-[#040F0F] dark:text-[#C9FBFF]"
+      >
         <Navbar />
         <main>
           <Hero />

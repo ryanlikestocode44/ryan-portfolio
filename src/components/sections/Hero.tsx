@@ -11,10 +11,13 @@ const Hero: FC = () => {
       id="home"
       className="min-h-screen flex items-center justify-center pt-20 px-4 overflow-hidden"
     >
-      {/* Subtle wave pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[hsl(184,100%,96%)]/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[hsl(170,80%,70%)]/10 rounded-full blur-3xl animate-pulse delay-1000" />
+      {/* Subtle animated orbs - Theme aware */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        {/* Light orbs */}
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-[#C9FBFF]/30 dark:bg-[#85BDBF]/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#C2FCF7]/20 dark:bg-[#57737A]/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        {/* Dark orbs */}
+        <div className="absolute top-3/4 left-3/4 w-48 h-48 bg-[#85BDBF]/40 dark:bg-[#C2FCF7]/30 rounded-full blur-xl animate-pulse delay-2000 hidden dark:block" />
       </div>
 
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
@@ -131,8 +134,8 @@ const Hero: FC = () => {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  // initial={{ scale: 0.9, opacity: 0 }}
-                  // animate={{ scale: 1, opacity: 1 }}
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.7 + index * 0.1 }}
                   className="p-4 bg-[hsl(200,20%,15%)]/60 backdrop-blur-xl rounded-2xl border border-[hsl(200,20%,25%)]/50 hover:border-[hsl(184,100%,92%)]/60 hover:shadow-[hsl(184,100%,96%)]/20 shadow-lg transition-all duration-300 flex items-center justify-center hover:shadow-xl"
                 >
