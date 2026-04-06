@@ -12,7 +12,7 @@ const Skills: FC = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="h-[60px] text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-[#c2fcf7] to-[#85bdbf] bg-clip-text text-transparent"
+          className="section-title mb-12 md:mb-16"
         >
           Tech Stack
         </motion.h2>
@@ -22,7 +22,7 @@ const Skills: FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-center text-xl text-slate-400 mb-20 max-w-2xl mx-auto"
+          className="text-center text-xl text-[#040f0f]/60 dark:text-slate-400 mb-12 max-w-2xl mx-auto"
         >
           Technologies I work with daily to build amazing digital experiences
         </motion.p>
@@ -36,7 +36,7 @@ const Skills: FC = () => {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <h3 className="text-2xl font-bold text-center text-white tracking-tight">
+            <h3 className="text-2xl font-bold text-center text-[#040f0f] dark:text-[#edfeff] tracking-tight">
               Frontend
             </h3>
             <div className="grid grid-cols-4 md:grid-cols-6 mx-auto gap-6">
@@ -54,7 +54,7 @@ const Skills: FC = () => {
             transition={{ delay: 0.1 }}
             className="space-y-4"
           >
-            <h3 className="text-2xl font-bold text-center text-white tracking-tight">
+            <h3 className="text-2xl font-bold text-center text-[#040f0f] dark:text-[#edfeff] tracking-tight">
               Backend
             </h3>
             <div className="grid grid-cols-2 gap-6 max-w-sm mx-auto">
@@ -72,7 +72,7 @@ const Skills: FC = () => {
             transition={{ delay: 0.2 }}
             className="space-y-4"
           >
-            <h3 className="text-2xl font-bold text-center text-white tracking-tight">
+            <h3 className="text-2xl font-bold text-center text-[#040f0f] dark:text-[#edfeff]  tracking-tight">
               Design & Tools
             </h3>
             <div className="grid grid-cols-4 gap-6 max-w-2xl mx-auto">

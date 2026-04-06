@@ -1,54 +1,56 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* bg-[#edfeff] */
+
 .app-wrapper {
   @apply min-h-screen bg-[#edfeff] dark:bg-[#040F0F] text-[#040F0F] dark:text-[#C9FBFF];
 }
 
 /* Navbar */
 .navbar {
-  @apply fixed top-0 w-full z-50 backdrop-blur-xl dark:bg-[#040F0F]/95 bg-[#edfeff]/80 dark:border-[#57737A]/30 border-b border-[#C2FCF7]/20 shadow-lg shadow-[#040f0f]/20 dark:shadow-[#85BDBF]/10
+  @apply fixed top-0 w-full z-50 backdrop-blur-xl dark:bg-[#040F0F]/95 bg-[#edfeff]/80 dark:border-[#57737A]/30 border-b border-[#C2FCF7]/20 shadow-lg shadow-[#040f0f]/20 dark:shadow-[#85BDBF]/10;
 }
 
 .nav-logo {
-  @apply text-2xl font-bold bg-gradient-to-r from-[#57737a] to-[#040f0f] dark:from-[#85BDBF] dark:to-[#57737A] bg-clip-text text-transparent dark:text-[#C9FBFF]/90
+  @apply text-2xl font-bold bg-gradient-to-r from-[#57737a] to-[#040f0f] dark:from-[#85BDBF] dark:to-[#57737A] bg-clip-text text-transparent dark:text-[#C9FBFF]/90;
 }
 
 .section-title {
-  @apply h-[60px] text-4xl md:text-5xl font-bold text-center mb-20 md:mb-28 bg-clip-text text-transparent bg-gradient-to-r from-[#040f0f] to-[#57737a] dark:from-[#c2fcf7] dark:to-[#85bdbf];
+  @apply h-[60px] text-4xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-[#040f0f] to-[#57737a] dark:from-[#c2fcf7] dark:to-[#85bdbf];
 }
 
 /* Hero Section */
 .light-orb-1 {
-  @apply absolute top-1/4 left-1/4 w-72 h-72 bg-[#C9FBFF]/30 dark:bg-[#85BDBF]/20 rounded-full blur-3xl animate-pulse
+  @apply absolute top-1/4 left-1/4 w-72 h-72 bg-[#C9FBFF]/30 dark:bg-[#85BDBF]/20 rounded-full blur-3xl animate-pulse;
 }
 
 .light-orb-2 {
-  @apply absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#C2FCF7]/20 dark:bg-[#57737A]/10 rounded-full blur-3xl animate-pulse delay-1000
+  @apply absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#C2FCF7]/20 dark:bg-[#57737A]/10 rounded-full blur-3xl animate-pulse delay-1000;
 }
 
 .dark-orb {
-  @apply absolute top-3/4 left-3/4 w-48 h-48 bg-[#85BDBF]/40 dark:bg-[#C2FCF7]/30 rounded-full blur-xl animate-pulse delay-2000 hidden dark:block
+  @apply absolute top-3/4 left-3/4 w-48 h-48 bg-[#85BDBF]/40 dark:bg-[#C2FCF7]/30 rounded-full blur-xl animate-pulse delay-2000 hidden dark:block;
 }
 
 .type-animation {
-  @apply inline-block text-[3rem] font-black bg-gradient-to-r bg-clip-text text-transparent from-[#040f0f] to-[#57737a] dark:from-[#c9fbff] dark:via-[#c2fcf7] dark:to-[#85bdbf]
+  @apply inline-block text-[3rem] font-black bg-gradient-to-r bg-clip-text text-transparent from-[#040f0f] to-[#57737a] dark:from-[#c9fbff] dark:via-[#c2fcf7] dark:to-[#85bdbf];
 }
 
 .download-fa-icon {
-  @apply w-4.5 h-4.5 text-[#edfeff] dark:text-[#040F0F] group-hover:text-[#edfeff] group-hover:dark:text-[#040F0F]/90 transition-colors
+  @apply w-4.5 h-4.5 text-[#edfeff] dark:text-[#040F0F] group-hover:text-[#edfeff] group-hover:dark:text-[#040F0F]/90 transition-colors;
 }
 
 .icy-text {
-  @apply text-4xl md:text-5xl lg:text-6xl font-black leading-tight bg-clip-text text-transparent bg-gradient-to-r dark:from-[#ebfeff] dark:via-[#75f0db] dark:to-[#70a7c2] from-[#040f0f] to-[#57737a]
+  @apply text-4xl md:text-5xl lg:text-6xl font-black leading-tight bg-clip-text text-transparent bg-gradient-to-r dark:from-[#ebfeff] dark:via-[#75f0db] dark:to-[#70a7c2] from-[#040f0f] to-[#57737a];
 }
 
 .link-button {
-  @apply p-4 text-[#C2FCF7]/60 dark:bg-[#1f292e]/60 backdrop-blur-xl rounded-2xl border-2 border-[#040f0f]/50 dark:border-[#33444d]/50 hover:border-[#57737a]/60 hover:dark:border-[#85BDBF]/60 hover:shadow-[#040f0f]/20 hover:dark:shadow-[#85BDBF]/20 shadow-lg transition-all duration-300 flex items-center justify-center hover:shadow-xl
+  @apply p-4 text-[#C2FCF7]/60 dark:bg-[#1f292e]/60 backdrop-blur-xl rounded-2xl border-2 border-[#040f0f]/50 dark:border-[#33444d]/50 hover:border-[#57737a]/60 hover:dark:border-[#85BDBF]/60 hover:shadow-[#040f0f]/20 hover:dark:shadow-[#85BDBF]/20 shadow-lg transition-all duration-300 flex items-center justify-center hover:shadow-xl;
 }
 
 .profile-image {
-  @apply w-full h-full object-cover transition-all duration-500 group-hover:shadow-[inset_0_0_0_100vw_rgba(8,145,178,0.15)] hover:brightness-110 hover:saturate-120 hover:shadow-[0_20px_40px_rgba(8,145,178,0.3)]
+  @apply w-full h-full object-cover transition-all duration-500 group-hover:shadow-[inset_0_0_0_100vw_rgba(8,145,178,0.15)] hover:brightness-110 hover:saturate-120 hover:shadow-[0_20px_40px_rgba(8,145,178,0.3)];
 }
 
 /* Education Section */
@@ -57,23 +59,62 @@
 }
 
 .education-img {
-  @apply w-32 h-32 md:w-60 md:h-60 lg:w-80 lg:h-80 relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-[#57737a]/25 hover:dark:shadow-cyan-500/25 border-2 border-black/20 dark:border-white/20 hover:border-[#57737a]/50 hover:dark:border-cyan-400/50 transition-all duration-300 bg-gradient-to-br from-slate-100/50 to-slate-200/50 dark:from-slate-800/50 dark:to-slate-900/50
+  @apply w-32 h-32 md:w-60 md:h-60 lg:w-80 lg:h-80 relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-[#57737a]/25 hover:dark:shadow-cyan-500/25 border-2 border-black/20 dark:border-white/20 hover:border-[#57737a]/50 hover:dark:border-cyan-400/50 transition-all duration-300 bg-gradient-to-br from-slate-100/50 to-slate-200/50 dark:from-slate-800/50 dark:to-slate-900/50;
 }
 
 .education-gpa {
-  @apply text-lg text-[#040f0f] dark:text-cyan-400 font-semibold bg-[#040f0f]/30  dark:bg-cyan-900/30 px-3 py-1 rounded-xl border border-[#040f0f]/30 dark:border-cyan-400/30
+  @apply text-lg text-[#040f0f] dark:text-cyan-400 font-semibold bg-[#040f0f]/30  dark:bg-cyan-900/30 px-3 py-1 rounded-xl border border-[#040f0f]/30 dark:border-cyan-400/30;
 }
 
 /* Skill Section */
-.skill-sm-card {
-  @apply flex flex-col justify-center rounded-xl shadow-lg border-2 p-2;
+.skill-card {
+  @apply relative overflow-hidden rounded-2xl bg-[#040f0f]/8 dark:bg-[#edfeff]/8 backdrop-blur-xl border border-[#040f0f]/20 dark:border-[#edfeff]/20 hover:border-[#040f0f]/40 hover:dark:border-[#edfeff]/40 hover:bg-[#040f0f]/15 hover:dark:bg-[#edfeff]/15 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center p-1 sm:p-2 hover:p-2;
+}
+.skill-icon-wrapper {
+  @apply w-14 h-14 sm:w-16 sm:h-16 mb-3 flex items-center justify-center rounded-xl bg-[#040f0f]/10 dark:bg-[#edfeff]/10 transition-all duration-300 group-hover:bg-[#040f0f]/20 dark:group-hover:bg-[#edfeff]/20;
+}
+.skill-name {
+  @apply text-xs sm:text-sm md:text-base font-semibold text-[#040f0f] dark:text-[#edfeff] text-center leading-tight px-2 drop-shadow-md group-hover:drop-shadow-lg transition-shadow;
 }
 
-.skill-name {
-  @apply text-center font-semibold text-xl mb-2;
+/* Experience Section */
+.exp-img-wrapper {
+  @apply flex-shrink-0 w-full lg:w-44 h-44 lg:h-44 rounded-2xl overflow-hidden shadow-2xl 
+  border-2 border-[#4B646A]/30 hover:border-[#040f0f]/60 dark:border-[#C2FCF7]/30 hover:dark:border-[#85BDBF]/60 
+  hover:shadow-[#57737a] hover:dark:shadow-[#85BDBF]/25 hover:shadow-xl transition-all duration-300 
+  bg-gradient-to-br from-[#c2fcf7]/50 to-[#c9fbff]/20 dark:from-[#040F0F]/50 dark:to-[#57737A]/20 backdrop-blur-sm;
+}
+
+.exp-content-wrapper {
+  @apply bg-[#c9fbff]/40 dark:bg-[#040F0F]/40 hover:bg-[#c9fbff]/60 hover:dark:bg-[#040F0F]/60 backdrop-blur-xl p-6 lg:p-8 rounded-2xl border border-[#57737A]/40 hover:border-[#040f0f]/50 hover:dark:border-[#C2FCF7]/50 shadow-xl hover:shadow-2xl transition-all duration-300;
+}
+
+.exp-content-header {
+  @apply flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6 gap-2 pb-4 border-b border-[#040f0f]/20 dark:border-[#57737A]/20;
+}
+
+.exp-tech-badge {
+  @apply px-5 py-1 bg-[#57737a]/20 dark:bg-[#C2FCF7]/20 text-[#212e2e] dark:text-[#85BDBF] text-sm font-medium rounded-lg border border-[#212e2e]/40 dark:border-[#85BDBF]/40 hover:bg-[#57737a]/30 hover:dark:bg-[#c2fcf7]/30 transition-all duration-200;
+}
+
+/* Projects Section */
+.project-card {
+  @apply relative overflow-hidden rounded-3xl bg-[#edfeff]/60 dark:bg-[#040F0F]/60 backdrop-blur-xl border border-[#040f0f]/40 dark:border-[#57737A]/40 hover:border-[#57737a]/60 hover:dark:border-[#C2FCF7]/60 hover:bg-[#edfeff]/80 hover:dark:bg-[#040F0F]/80 shadow-2xl hover:shadow-[#57737a]/30 hover:dark:shadow-[#85BDBF]/30 transition-all duration-500;
+}
+
+.project-tech-badge {
+  @apply px-2 py-0.5 bg-[#57737a]/20 dark:bg-[#C2FCF7]/20 text-[#040f0f] dark:text-[#85BDBF] text-[10px] md:text-xs font-medium rounded-lg border border-[#040f0f]/40 dark:border-[#85BDBF]/40 hover:bg-[#C2FCF7]/40 transition-all duration-200 whitespace-nowrap;
+}
+
+.project-github-icon {
+  @apply p-2.5 rounded-xl bg-[#57737a]/20 dark:bg-[#C2FCF7]/20 border border-[#57737a]/40 dark:border-[#C2FCF7]/40 hover:border-[#040f0f]/60 hover:dark:border-[#85BDBF]/60 backdrop-blur-sm hover:bg-[#57737a]/40 hover:dark:bg-[#C2FCF7]/40 hover:shadow-[#040f0f]/30 hover:dark:shadow-[#85BDBF]/30 shadow-sm transition-all duration-300 flex items-center justify-center text-[#040f0f] dark:text-[#85BDBF] hover:text-[#040F0F] hover:dark:text-[#c9fbff];
+}
+
+.project-live-icon {
+  @apply p-2.5 rounded-xl bg-gradient-to-r from-[#57737a]/30 to-[#040f0f]/30 dark:from-[#C2FCF7]/30 dark:to-[#85BDBF]/30 border border-[#040f0f]/50 hover:border-[#57737a]/70 dark:border-[#C2FCF7]/50 hover:dark:border-[#85BDBF]/70  hover:from-[#57737a]/50 hover:to-[#040f0f]/50 hover:dark:from-[#C2FCF7]/50 hover:dark:to-[#85BDBF]/50 hover:shadow-[#57737a]/40 hover:dark:shadow-[#85BDBF]/40 shadow-sm transition-all duration-300 flex items-center justify-center text-[#040f0f] dark:text-[#C9FBFF];
 }
 
 /* Scroll To Top Button */
 .scroll-to-top-btn {
-  @apply cursor-pointer p-3 md:p-3.5 bg-gradient-to-br from-[#c2fcf7]/90 to-[#c9fbff]/50 dark:from-[#040F0F]/90 dark:to-[#57737A]/50 backdrop-blur-xl rounded-xl border border-[#C2FCF7]/40 hover:border-[#85BDBF]/70 hover:from-[#040F0F] hover:to-[#85BDBF]/60 hover:shadow-[#C2FCF7]/30 shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#C2FCF7]/50;
+  @apply cursor-pointer p-3 md:p-3.5 bg-gradient-to-br from-[#c2fcf7]/90 to-[#c9fbff]/50 dark:from-[#040F0F]/90 dark:to-[#57737A]/50 backdrop-blur-xl rounded-xl border border-[#57737a]/70 hover:border-[#040F0F]/70 dark:border-[#c2fcf7]/70 hover:dark:border-[#85BDBF]/70 hover:from-[#c9fbff] hover:to-[#c2fcf7]/60 hover:dark:from-[#040F0F] hover:dark:to-[#85BDBF]/60 shadow-lg hover:shadow-[#C2FCF7]/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#040f0f]/50 focus:dark:ring-[#C2FCF7]/50;
 }

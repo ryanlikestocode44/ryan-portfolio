@@ -13,7 +13,7 @@ const Contact: FC = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="section-title"
+          className="section-title mb-12 md:mb-16"
         >
           Let's Work Together
         </motion.h2>
@@ -23,7 +23,7 @@ const Contact: FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-xl mb-10 text-center max-w-full mx-auto leading-relaxed text-slate-300"
+          className="text-xl mb-10 text-center max-w-full mx-auto leading-relaxed text-[#57737a] dark:text-slate-300"
         >
           Ready to bring your ideas to life? Let's create something amazing
           together! 🚀

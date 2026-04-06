@@ -12,7 +12,7 @@ const Education: FC = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="section-title"
+          className="section-title mb-20 md:mb-28"
         >
           Education Journey
         </motion.h2>
