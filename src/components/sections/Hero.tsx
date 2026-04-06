@@ -44,9 +44,7 @@ const Hero: FC = () => {
                 1500, // Pause
                 "Frontend Developer", // Role 1
                 1000,
-                "Full Stack Engineer", // Role 2
-                1000,
-                "UI/UX Designer", // Role 3
+                "Digital Designer", // Role 2
                 1000,
                 () => {}, // Infinite loop
               ]}

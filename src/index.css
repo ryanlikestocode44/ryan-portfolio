@@ -114,6 +114,32 @@
   @apply p-2.5 rounded-xl bg-gradient-to-r from-[#57737a]/30 to-[#040f0f]/30 dark:from-[#C2FCF7]/30 dark:to-[#85BDBF]/30 border border-[#040f0f]/50 hover:border-[#57737a]/70 dark:border-[#C2FCF7]/50 hover:dark:border-[#85BDBF]/70  hover:from-[#57737a]/50 hover:to-[#040f0f]/50 hover:dark:from-[#C2FCF7]/50 hover:dark:to-[#85BDBF]/50 hover:shadow-[#57737a]/40 hover:dark:shadow-[#85BDBF]/40 shadow-sm transition-all duration-300 flex items-center justify-center text-[#040f0f] dark:text-[#C9FBFF];
 }
 
+/* Contact Section */
+.social-links {
+  @apply p-3 md:p-4 bg-[#c9fbff]/60 dark:bg-[#040F0F]/60 backdrop-blur-xl rounded-2xl border border-[#85bdbf]/50 hover:border-[#57737a]/70 dark:border-[#57737A]/50 hover:dark:border-[#C2FCF7]/70 hover:bg-[#c9fbff]/80 hover:dark:bg-[#040F0F]/80 hover:shadow-[#57737a]/30 hover:dark:shadow-[#85BDBF]/30 shadow-lg transition-all duration-300 flex items-center justify-center;
+}
+
+.social-icon {
+  @apply text-[#040f0f] dark:text-[#C9FBFF] text-xl md:text-2xl hover:text-[#57737a] hover:dark:text-[#85BDBF];
+}
+
+.contact-card {
+  @apply bg-[#c9fbff]/60 dark:bg-[#040F0F]/60 backdrop-blur-xl p-4 md:p-6 rounded-2xl border border-[#57737a]/20 hover:border-[#57737a]/60 dark:border-[#57737A]/40 hover:dark:border-[#C2FCF7]/60 hover:bg-[#c9fbff]/80 hover:dark:bg-[#040F0F]/80 shadow-lg hover:shadow-xl transition-all duration-400 cursor-pointer relative overflow-hidden;
+}
+
+/* Footer */
+.footer-gradient {
+  @apply absolute inset-0 bg-gradient-to-t from-[#c9fbff]/90 via-[#c9fbff]/50 dark:from-[#040F0F]/90 dark:via-[#040F0F]/50 to-transparent pointer-events-none;
+}
+
+.footer-name {
+  @apply h-[60px] text-3xl md:text-4xl lg:text-5xl font-black bg-gradient-to-r from-[#040f0f] via-[#040f0f] dark:from-[#C9FBFF] dark:via-[#C2FCF7] to-[#85BDBF] bg-clip-text text-transparent mb-4;
+}
+
+.footer-quick-links {
+  @apply text-[#314145]/80 hover:text-[#040f0f] dark:text-[#85BDBF]/70 hover:dark:text-[#C2FCF7] hover:underline transition-all duration-300 font-medium;
+}
+
 /* Scroll To Top Button */
 .scroll-to-top-btn {
   @apply cursor-pointer p-3 md:p-3.5 bg-gradient-to-br from-[#c2fcf7]/90 to-[#c9fbff]/50 dark:from-[#040F0F]/90 dark:to-[#57737A]/50 backdrop-blur-xl rounded-xl border border-[#57737a]/70 hover:border-[#040F0F]/70 dark:border-[#c2fcf7]/70 hover:dark:border-[#85BDBF]/70 hover:from-[#c9fbff] hover:to-[#c2fcf7]/60 hover:dark:from-[#040F0F] hover:dark:to-[#85BDBF]/60 shadow-lg hover:shadow-[#C2FCF7]/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#040f0f]/50 focus:dark:ring-[#C2FCF7]/50;

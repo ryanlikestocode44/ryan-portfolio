@@ -58,9 +58,9 @@ const Contact: FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.4 + index * 0.1 }}
                 whileHover={{ scale: 1.15, rotate: 8 }}
-                className="p-3 md:p-4 bg-[#040F0F]/60 backdrop-blur-xl rounded-2xl border border-[#57737A]/50 hover:border-[#C2FCF7]/70 hover:bg-[#040F0F]/80 hover:shadow-[#85BDBF]/30 shadow-lg transition-all duration-300 flex items-center justify-center"
+                className="social-links"
               >
-                <Icon className="text-[#C9FBFF] text-xl md:text-2xl hover:text-[#85BDBF]" />
+                <Icon className="social-icon" />
               </motion.a>
             ))}
           </div>
