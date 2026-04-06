@@ -15,7 +15,7 @@ const HobbyCard: FC<HobbyCardProps> = React.memo(({ hobby, index }) => {
         boxShadow: "0 15px 30px -8px rgba(0, 0, 0, 0.3)", // Smaller shadow
       }}
       viewport={{ once: true }}
-      className="group relative overflow-hidden rounded-2xl bg-white/8 backdrop-blur-xl border border-white/20 hover:border-white/40 transition-all duration-400 aspect-video hover:p-0" // aspect-video (16:9 compact)
+      className="hobby-card" // aspect-video (16:9 compact)
       role="img"
       tabIndex={0}
       aria-label={hobby.title}

@@ -137,9 +137,8 @@ const Hero: FC = () => {
           initial={{ opacity: 0, scale: 0.9, x: 50 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 0.9, delay: 0.3 }}
-          className="w-full h-[100px] md:h-[300px] lg:h-[500px] group relative overflow-hidden"
+          className="w-full sm:w-[50px] h-[100px] md:h-[300px] lg:h-[500px] group relative overflow-hidden"
         >
-          {/* PURE IMG - NO CONTAINERS, NO BORDERS */}
           <img
             src={profileImg.profile}
             alt="Ryan Nicholas Purba"
