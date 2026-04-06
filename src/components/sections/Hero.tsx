@@ -14,10 +14,10 @@ const Hero: FC = () => {
       {/* Subtle animated orbs - Theme aware */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         {/* Light orbs */}
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-[#C9FBFF]/30 dark:bg-[#85BDBF]/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#C2FCF7]/20 dark:bg-[#57737A]/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="light-orb-1" />
+        <div className="light-orb-2" />
         {/* Dark orbs */}
-        <div className="absolute top-3/4 left-3/4 w-48 h-48 bg-[#85BDBF]/40 dark:bg-[#C2FCF7]/30 rounded-full blur-xl animate-pulse delay-2000 hidden dark:block" />
+        <div className="dark-orb" />
       </div>
 
       <div className="max-w-6xl w-full grid md:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
@@ -34,7 +34,7 @@ const Hero: FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight bg-clip-text text-transparent bg-gradient-to-r from-[hsl(184,100%,96%)] via-[hsl(170,80%,70%)] to-[hsl(200,40%,60%)]"
+              className="icy-text"
             >
               Hi! I'm <br />
             </motion.h1>
@@ -52,28 +52,18 @@ const Hero: FC = () => {
               ]}
               wrapper="span"
               speed={60}
-              style={{
-                fontSize: "3em",
-                display: "inline-block",
-                background:
-                  "linear-gradient(135deg, hsl(184,100%,96%) 0%, hsl(170,80%,70%) 50%, hsl(200,40%,60%) 100%)",
-                WebkitBackgroundClip: "text",
-                backgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                fontWeight: "900",
-              }}
               repeat={Infinity}
               cursor={true}
-              className="inline-block"
+              className="type-animation"
             />
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-xl md:text-2xl leading-relaxed max-w-lg text-[hsl(200,20%,75%)] font-light backdrop-blur-sm"
+              className="text-xl md:text-2xl leading-relaxed max-w-lg dark:text-[#b3c4cc] text-[#040f0f] font-light backdrop-blur-sm"
             >
               Crafting{" "}
-              <span className="font-semibold text-[hsl(170,80%,70%)]">
+              <span className="font-semibold dark:text-[#75f0db] text-[#57737a]">
                 pixel-perfect
               </span>{" "}
               digital experiences with clean code and modern design.
@@ -90,11 +80,9 @@ const Hero: FC = () => {
             <Button
               variant="primary"
               size="lg"
-              className="cursor-pointer group inline-flex items-center shadow-2xl hover:shadow-[#85BDBF]/40 hover:shadow-2xl hover:scale-[1.02] backdrop-blur-xl"
+              className="cursor-pointer group inline-flex items-center shadow-2xl hover:shadow-2xl hover:scale-[1.02] backdrop-blur-xl"
             >
-              <span className="text-[#040F0F] font-bold tracking-wide">
-                Download My CV
-              </span>
+              <span className="font-bold tracking-wide">Download My CV</span>
 
               {/* Animated Download Icon */}
               <motion.span
@@ -109,7 +97,7 @@ const Hero: FC = () => {
                   ease: "easeInOut",
                 }}
               >
-                <FaFileDownload className="w-4.5 h-4.5 text-[#040F0F] group-hover:text-[#040F0F]/90 transition-colors" />
+                <FaFileDownload className="download-fa-icon" />
               </motion.span>
             </Button>
 
@@ -137,9 +125,9 @@ const Hero: FC = () => {
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 0.7 + index * 0.1 }}
-                  className="p-4 bg-[hsl(200,20%,15%)]/60 backdrop-blur-xl rounded-2xl border border-[hsl(200,20%,25%)]/50 hover:border-[hsl(184,100%,92%)]/60 hover:shadow-[hsl(184,100%,96%)]/20 shadow-lg transition-all duration-300 flex items-center justify-center hover:shadow-xl"
+                  className="link-button"
                 >
-                  <Icon className="text-[hsl(184,100%,96%)] text-xl transition-colors" />
+                  <Icon className="text-[#040F0F] dark:text-[#ebfeff] text-xl transition-colors" />
                 </motion.a>
               ))}
             </div>
@@ -157,7 +145,7 @@ const Hero: FC = () => {
           <img
             src={profileImg.profile}
             alt="Ryan Nicholas Purba"
-            className="w-full h-full object-cover transition-all duration-500 group-hover:shadow-[inset_0_0_0_100vw_rgba(8,145,178,0.15)] hover:brightness-110 hover:saturate-120 hover:shadow-[0_20px_40px_rgba(8,145,178,0.3)]"
+            className="profile-image"
             loading="eager"
             fetchPriority="high"
             draggable={false}

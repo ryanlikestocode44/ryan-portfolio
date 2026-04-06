@@ -25,15 +25,15 @@ const EducationCard: FC<EducationCardProps> = React.memo(
         >
           <motion.div
             whileHover={{ scale: 1.02, y: -2 }}
-            className="bg-white/5 backdrop-blur-xl p-6 md:p-8 rounded-2xl border border-white/10 hover:border-white/30 shadow-xl hover:shadow-2xl transition-all duration-300"
+            className="education-card"
           >
             {/* Institution + GPA */}
             <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-3 gap-2">
-              <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight">
+              <h3 className="text-2xl md:text-3xl font-bold text-black dark:text-white leading-tight">
                 {education.institution}
               </h3>
               {education.gpa && education.type === "university" && (
-                <span className="text-cyan-400 font-semibold text-lg bg-cyan-900/30 px-3 py-1 rounded-xl border border-cyan-400/30">
+                <span className="education-gpa">
                   {education.gpa}
                 </span>
               )}
@@ -41,27 +41,29 @@ const EducationCard: FC<EducationCardProps> = React.memo(
 
             {/* Degree & Period */}
             <div className="mb-4">
-              <p className="text-cyan-300 font-semibold text-lg">
+              <p className="text-[#57737a] dark:text-cyan-300 font-semibold text-lg">
                 {education.degree}
               </p>
-              <p className="text-slate-400 text-sm mt-1">{education.period}</p>
+              <p className="text-[#040f0f] dark:text-slate-400 text-sm mt-1">
+                {education.period}
+              </p>
             </div>
 
             {/* Description */}
-            <p className="text-slate-300 leading-relaxed text-sm md:text-base">
+            <p className="text-[#040f0f] dark:text-slate-300 leading-relaxed text-sm md:text-base">
               {education.description}
             </p>
 
             {/* Type Badge */}
-            <div className="mt-4 pt-4 border-t border-white/10">
+            <div className="mt-4 pt-4 border-t border-black/10 dark:border-white/10">
               <span
-                className={`px-3 py-1 rounded-full text-xs font-medium ${
-                  education.type === "school"
-                    ? "bg-orange-500/20 text-orange-300 border-orange-500/30"
-                    : education.type === "university"
-                      ? "bg-emerald-500/20 text-emerald-300 border-emerald-500/30"
-                      : "bg-purple-500/20 text-purple-300 border-purple-500/30"
-                }`}
+                className={`px-3 py-1 rounded-full text-xs font-medium border transition-all duration-200 ${
+    education.type === "school"
+      ? "bg-orange-100 dark:bg-orange-500/20 text-orange-800 dark:text-orange-300 border-orange-200 dark:border-orange-500/30"
+      : education.type === "university"
+        ? "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-200 dark:border-emerald-500/30"
+        : "bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300 border-purple-200 dark:border-purple-500/30"
+  }`}
               >
                 {education.type === "school"
                   ? "High School"
@@ -77,10 +79,7 @@ const EducationCard: FC<EducationCardProps> = React.memo(
         <div
           className={`${side === "right" ? "md:pl-2" : "md:pr-2"} flex-shrink-0`}
         >
-          <motion.div
-            whileHover={{ scale: 1.08 }}
-            className="w-32 h-32 md:w-60 md:h-60 lg:w-80 lg:h-80 relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-cyan-500/25 border-2 border-white/20 hover:border-cyan-400/50 transition-all duration-300 bg-gradient-to-br from-slate-800/50 to-slate-900/50"
-          >
+          <motion.div whileHover={{ scale: 1.08 }} className="education-img">
             <img
               src={education.image}
               alt={education.institution}

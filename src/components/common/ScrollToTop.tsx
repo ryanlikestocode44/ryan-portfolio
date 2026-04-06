@@ -36,10 +36,10 @@ const ScrollToTop: FC = () => {
             whileHover={{ scale: 1.08, y: -4 }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToTop}
-            className="cursor-pointer p-3 md:p-3.5 bg-gradient-to-br from-[#040F0F]/90 to-[#57737A]/50 backdrop-blur-xl rounded-xl border border-[#C2FCF7]/40 hover:border-[#85BDBF]/70 hover:from-[#040F0F] hover:to-[#85BDBF]/60 hover:shadow-[#C2FCF7]/30 shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#C2FCF7]/50 group"
+            className="scroll-to-top-btn"
             aria-label="Scroll to top"
           >
-            <FaArrowUp className="text-[#C9FBFF] text-base md:text-lg group-hover:text-[#85BDBF] transition-colors" />
+            <FaArrowUp className="text-[#040f0f] dark:text-[#C9FBFF] text-base md:text-lg group-hover:text-[#A3E5E7] group-hover:dark:text-[#85BDBF] transition-colors" />
           </motion.button>
         </motion.div>
       )}

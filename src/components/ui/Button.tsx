@@ -21,14 +21,23 @@ const Button: React.FC<ButtonProps> = ({
 
   const variantClasses = {
     primary: `
-      bg-gradient-to-r from-[#C2FCF7] to-[#85BDBF] 
-      text-[#040F0F] 
-      hover:from-[#C9FBFF] hover:to-[#85BDBF] 
-      hover:shadow-[#85BDBF]/40 
+      bg-gradient-to-r from-[#040f0f] to-[#57737a] 
+      text-[#edfeff] 
+      hover:from-[#0E1E1E] hover:to-[#57737a] 
+      hover:shadow-[#57737a]/40 
       hover:shadow-2xl 
-      hover:border-[#85BDBF]/50 
-      border border-[#C2FCF7]/60
-      focus:ring-[#85BDBF]/50
+      hover:border-[#57737a]/50 
+      border border-[#0e1e1e]/60
+      focus:ring-[#57737a]/50
+
+      dark:bg-gradient-to-r dark:from-[#C2FCF7] dark:to-[#85BDBF] 
+      dark:text-[#040F0F] 
+      hover:dark:from-[#C9FBFF] hover:dark:to-[#85BDBF] 
+      hover:dark:shadow-[#85BDBF]/40 
+      hover:dark:shadow-2xl 
+      hover:dark:border-[#85BDBF]/50 
+      dark:border dark:border-[#C2FCF7]/60
+      focus:dark:ring-[#85BDBF]/50
     `,
     secondary: `
       bg-[#040F0F]/40 backdrop-blur-xl 

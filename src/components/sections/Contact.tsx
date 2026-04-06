@@ -13,7 +13,7 @@ const Contact: FC = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="h-[60px] text-4xl md:text-5xl font-bold text-center mb-10 md:mb-15 bg-gradient-to-r from-[#C2FCF7] via-[#85BDBF] to-[#57737A] bg-clip-text text-transparent"
+          className="section-title"
         >
           Let's Work Together
         </motion.h2>

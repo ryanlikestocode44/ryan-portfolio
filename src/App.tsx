@@ -17,11 +17,7 @@ const App: React.FC = () => {
 
   return (
     <ThemeProvider>
-      <div
-        ref={AppRootRef}
-        data-theme="light"
-        className="min-h-screen bg-[#C9FBFF] dark:bg-[#040F0F] text-[#040F0F] dark:text-[#C9FBFF]"
-      >
+      <div ref={AppRootRef} data-theme="light" className="app-wrapper">
         <Navbar />
         <main>
           <Hero />

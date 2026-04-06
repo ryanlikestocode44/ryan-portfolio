@@ -5,7 +5,7 @@ import type { TimelineProps } from "@/types";
 
 const Timeline: FC<TimelineProps> = ({
   children,
-  lineColor = "from-[#c9fbff] via-[#c2fcf7] to-[#85bdbf]",
+  lineColor = "from-[#040f0f] to-[#57737a] dark:from-[#c9fbff] dark:via-[#c2fcf7] dark:to-[#85bdbf]",
   className = "",
 }) => {
   const items = Children.toArray(children);
