@@ -50,22 +50,19 @@ const Navbar: FC = () => {
               ))}
             </div>
 
-            <div className="nav-buttons flex gap-2">
+            <div className="flex gap-2">
               {/* ThemeToggle */}
               <ThemeToggle />
 
               {/* Mobile Burger */}
               <motion.button
                 onClick={() => setIsOpen(true)}
-                className="md:hidden p-2.5 rounded-xl bg-[#040F0F]/70 backdrop-blur-xl 
-                  border border-[#57737A]/60 hover:border-[#C2FCF7]/80 
-                  hover:bg-[#040F0F]/90 shadow-lg hover:shadow-[#C2FCF7]/40 
-                  transition-all duration-300 z-50"
+                className="mobile-burger"
                 whileHover={{ scale: 1.15 }}
-                whileTap={{ scale: 0.95 }}
+                // whileTap={{ scale: 0.95 }}
                 aria-label="Open menu"
               >
-                <FaBars className="text-[#C9FBFF] text-xl" />
+                <FaBars className="text-[#040f0f] dark:text-[#C9FBFF] text-xl" />
               </motion.button>
             </div>
           </div>

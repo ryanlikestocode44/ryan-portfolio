@@ -32,7 +32,7 @@ const ContactCard: FC<ContactCardProps> = React.memo(({ item, index }) => {
         </h4>
         <motion.a
           href={item.href}
-          className="text-[#57737a] hover:text-[#57737a] dark:text-[#85BDBF] hover:dark:text-[#C2FCF7] text-sm md:text-md font-medium block transition-colors duration-300 line-clamp-1 group-hover:underline"
+          className="contact-card-content"
           target="_blank"
           rel="noopener noreferrer"
         >

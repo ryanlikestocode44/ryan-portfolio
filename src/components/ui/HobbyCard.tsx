@@ -10,12 +10,12 @@ const HobbyCard: FC<HobbyCardProps> = React.memo(({ hobby, index }) => {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ delay: index * 0.08 }}
       whileHover={{
-        scale: 1.03, // Reduced from 1.05
-        rotateY: 3, // Subtle tilt
-        boxShadow: "0 15px 30px -8px rgba(0, 0, 0, 0.3)", // Smaller shadow
+        scale: 1.03,
+        rotateY: 3,
+        boxShadow: "0 15px 30px -8px rgba(0, 0, 0, 0.3)",
       }}
       viewport={{ once: true }}
-      className="hobby-card" // aspect-video (16:9 compact)
+      className="hobby-card group" // ✅ TAMBAH 'group' DISINI
       role="img"
       tabIndex={0}
       aria-label={hobby.title}
@@ -29,16 +29,16 @@ const HobbyCard: FC<HobbyCardProps> = React.memo(({ hobby, index }) => {
       <img
         src={hobby.image}
         alt={hobby.title}
-        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-600" // Reduced scale
+        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-600"
         loading="lazy"
         draggable={false}
       />
 
       {/* Compact Title Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-400 flex items-end p-4 sm:p-6">
+      <div className="hobby-title-overlay">
         <motion.h3
           whileHover={{ scale: 1.03 }}
-          className="text-lg sm:text-xl font-bold text-white drop-shadow-md" // Smaller text
+          className="text-lg sm:text-xl font-bold text-white drop-shadow-md"
         >
           {hobby.title}
         </motion.h3>

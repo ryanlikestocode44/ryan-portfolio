@@ -29,6 +29,11 @@ export interface NavbarProps {
   activeSection: SectionName;
 }
 
+export interface MobileSidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
 export interface EducationItem {
   id: number;
   institution: string;

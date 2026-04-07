@@ -11,7 +11,7 @@ const Projects: React.FC = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="section-title mb-20 md:mb-28"
+          className="section-title mb-14 md:mb-16 h-[45px]"
         >
           Featured Projects
         </motion.h2>

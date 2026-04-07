@@ -11,11 +11,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import type { FC } from "react";
-
-interface MobileSidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
+import type { MobileSidebarProps } from "@/types";
 
 const MobileSidebar: FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
   const activeSection = useActiveSection();
@@ -42,24 +38,22 @@ const MobileSidebar: FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
             className="sidebar"
           >
             {/* Header */}
-            <div className="p-6 border-b border-[#57737A]/30 sticky top-0 bg-[#040F0F]/95 backdrop-blur-xl z-10">
+            <div className="p-6 border-b border-[#57737A]/30 sticky top-0 bg-[#c9fbff]/95 dark:bg-[#040F0F]/95 backdrop-blur-xl z-10">
               <div className="flex items-center justify-between mb-6">
                 <div
                   className="text-2xl font-bold bg-gradient-to-r 
-                  from-[#85BDBF] to-[#57737A] bg-clip-text text-transparent"
+                  from-[#040f0f] to-[#040f0f] dark:from-[#85BDBF] dark:to-[#57737A] bg-clip-text text-transparent"
                 >
                   Ryan Portfolio
                 </div>
 
                 <motion.button
                   onClick={onClose}
-                  className="p-2 rounded-xl bg-[#C2FCF7]/20 border border-[#C2FCF7]/40 
-                  hover:bg-[#C2FCF7]/40 hover:border-[#85BDBF]/60 
-                  transition-all duration-200 flex items-center justify-center"
+                  className="sidebar-close"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <FaTimes className="text-[#85BDBF] text-xl" />
+                  <FaTimes className="text-[#040f0f] dark:text-[#85BDBF] text-xl" />
                 </motion.button>
               </div>
             </div>
@@ -74,9 +68,9 @@ const MobileSidebar: FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
                   className={`flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 group 
                     ${
                       activeSection === id
-                        ? "bg-[#C2FCF7]/20 border-[#C2FCF7]/50 text-[#85BDBF] shadow-md"
-                        : "text-[#C9FBFF]/70 hover:bg-[#040F0F]/70 hover:text-[#C2FCF7] border-[#57737A]/30"
-                    } border hover:border-[#C2FCF7]/40 hover:shadow-[#85BDBF]/30`}
+                        ? "bg-[#57737a]/20 border-[#57737a]/50 text-[#040f0f]   dark:bg-[#C2FCF7]/20 dark:border-[#C2FCF7]/50 dark:text-[#85BDBF] shadow-md"
+                        : "text-[#040f0f]/70 hover:bg-[#C9FBFF]/70 hover:text-[#57737a] border-[#c2fcf7]/30  dark:text-[#C9FBFF]/70 hover:dark:bg-[#040F0F]/70 hover:dark:text-[#C2FCF7] dark:border-[#57737A]/30"
+                    } border hover:border-[#57737a]/40 hover:shadow-[#040f0f]/30 hover:dark:border-[#C2FCF7]/40 hover:dark:shadow-[#85BDBF]/30`}
                   whileHover={{
                     scale: 1.02,
                     x: 4,
@@ -101,7 +95,7 @@ const MobileSidebar: FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[998]"
+            className="fixed inset-0 bg-white/60 dark:bg-black/60 backdrop-blur-sm z-[998]"
             transition={{ duration: 0.2 }}
           />
         )}

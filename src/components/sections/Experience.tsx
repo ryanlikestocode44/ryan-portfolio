@@ -11,7 +11,7 @@ const Experience: FC = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="section-title mb-12 md:mb-16"
+          className="section-title mb-12 md:mb-16 h-[100px]"
         >
           Professional Experience
         </motion.h2>

@@ -34,16 +34,13 @@ const ProjectCard: FC<ProjectCardProps> = React.memo(({ project, index }) => {
         {/* Title */}
         <motion.h3
           whileHover={{ scale: 1.01 }}
-          className="text-lg md:text-xl font-bold text-[#040f0f] dark:text-[#C9FBFF] mb-2 leading-tight line-clamp-2 group-hover:text-[#57737a] group-hover:dark:text-[#85BDBF] transition-colors duration-200" // Smaller text
+          className="project-content-title" // Smaller text
         >
           {project.title}
         </motion.h3>
 
         {/* Description */}
-        <p className="text-[#040f0f]/80 dark:text-[#C9FBFF]/80 text-xs md:text-sm leading-relaxed mb-4 line-clamp-2">
-          {" "}
-          {project.description}
-        </p>
+        <p className="project-card-content"> {project.description}</p>
 
         {/* Tech Stack Badges */}
         <div className="flex flex-wrap gap-1 mb-4">

@@ -32,7 +32,7 @@ const ThemeToggle: FC = () => {
   return (
     <motion.button
       onClick={toggleTheme}
-      className="cursor-pointer p-2.5 rounded-xl bg-[#040F0F]/70 backdrop-blur-xl border border-[#57737A]/60 hover:border-[#C2FCF7]/80 hover:bg-[#040F0F]/90 shadow-lg hover:shadow-[#C2FCF7]/40 z-50 relative overflow-hidden"
+      className="theme-toggle"
       whileHover={{ scale: 1.08, rotate: 2 }}
       whileTap={{ scale: 0.96 }}
       aria-label={`Switch to ${darkMode ? "light" : "dark"} theme`}

@@ -13,7 +13,7 @@ const Contact: FC = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="section-title mb-12 md:mb-16"
+          className="section-title mb-12 md:mb-16 h-[45px]"
         >
           Let's Work Together
         </motion.h2>
