@@ -11,6 +11,13 @@ import profileImg from "@/assets/img";
 import type { FC } from "react";
 
 const Hero: FC = () => {
+  const cvLink =
+    "https://drive.google.com/file/d/1fTv7tUcEoT0Q1lGAzw6EchFr8BDBIwNs/view?usp=drive_link";
+
+  const downloadFile = () => {
+    window.location.href = cvLink;
+  };
+
   return (
     <section
       id="home"
@@ -84,9 +91,10 @@ const Hero: FC = () => {
               className="flex flex-col sm:flex-row gap-4 pt-2"
             >
               <Button
+                onClick={downloadFile}
                 variant="primary"
                 size="lg"
-                className="cursor-pointer group inline-flex items-center shadow-2xl hover:shadow-2xl hover:scale-[1.02] backdrop-blur-xl"
+                className="cursor-pointer group inline-flex items-center shadow-lg hover:shadow-xl backdrop-blur-xl"
               >
                 <span className="font-bold tracking-wide">Download My CV</span>
                 <motion.span
@@ -193,6 +201,7 @@ const Hero: FC = () => {
               className="flex flex-col sm:flex-row gap-4 pt-2"
             >
               <Button
+                onClick={downloadFile}
                 variant="primary"
                 size="lg"
                 className="cursor-pointer group inline-flex items-center shadow-2xl hover:shadow-2xl hover:scale-[1.02] backdrop-blur-xl"

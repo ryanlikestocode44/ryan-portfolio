@@ -1,6 +1,6 @@
-import statuskuImg from "@/assets/img/projects/statusku.png";
-import airhopperImg from "@/assets/img/projects/airhopper.png";
-import resumeInsightImg from "@/assets/img/projects/resumeinsight.png";
+import statuskuImg from "@/assets/img/projects/statusku.webp";
+import airhopperImg from "@/assets/img/projects/airhopper.webp";
+import resumeInsightImg from "@/assets/img/projects/resumeinsight.webp";
 
 import type { ProjectItem } from "@/types";
 

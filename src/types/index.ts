@@ -16,9 +16,9 @@ export type SectionName =
   | "hobbies"
   | "contact";
 
-// Component Props
+// Update ButtonProps dulu
 export interface ButtonProps {
-  children: React.ReactNode;
+  children: ReactNode;
   variant?: "primary" | "secondary" | "outline";
   size?: "sm" | "md" | "lg";
   onClick?: () => void;

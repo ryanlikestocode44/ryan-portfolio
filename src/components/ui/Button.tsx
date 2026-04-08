@@ -60,15 +60,17 @@ const Button: React.FC<ButtonProps> = ({
   };
 
   return (
-    <motion.button
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.97 }}
-      className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
-      onClick={onClick}
-      {...props}
-    >
-      {children}
-    </motion.button>
+    <>
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.97 }}
+        className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
+        onClick={onClick}
+        {...props}
+      >
+        {children}
+      </motion.button>
+    </>
   );
 };
 
