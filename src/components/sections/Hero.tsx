@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 import Button from "@/components/ui/Button";
 import { TypeAnimation } from "react-type-animation";
-import profileImg from "@/assets/img";
+import profileImg from "@/assets/img/ryan-profile.png";
 import type { FC } from "react";
 
 const Hero: FC = () => {
@@ -34,7 +34,7 @@ const Hero: FC = () => {
             className="w-24 h-24 flex-shrink-0 rounded-full overflow-hidden ring-4 ring-white/50 shadow-2xl"
           >
             <img
-              src={profileImg.profile}
+              src={profileImg}
               alt="Ryan Nicholas Purba"
               className="w-full h-full object-cover"
               loading="eager"
@@ -263,7 +263,7 @@ const Hero: FC = () => {
             className="w-full h-[300px] lg:h-[500px] group relative overflow-hidden"
           >
             <img
-              src={profileImg.profile}
+              src={profileImg}
               alt="Ryan Nicholas Purba"
               className="profile-image"
               loading="eager"

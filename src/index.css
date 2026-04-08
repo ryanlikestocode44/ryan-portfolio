@@ -46,7 +46,7 @@
 }
 
 .type-animation {
-  @apply inline-block text-[2.5rem] sm:text-[3rem] font-black bg-gradient-to-r bg-clip-text text-transparent from-[#040f0f] to-[#57737a] dark:from-[#c9fbff] dark:via-[#c2fcf7] dark:to-[#85bdbf] h-[120px] sm:h-[200px] md:h-[150px] lg:h-[120px] xl:h-[90px] leading-tight;
+  @apply inline-block text-[2.5rem] sm:text-[3rem] font-black bg-gradient-to-r bg-clip-text text-transparent from-[#040f0f] to-[#57737a] dark:from-[#c9fbff] dark:via-[#c2fcf7] dark:to-[#85bdbf] h-[150px] sm:h-[130px] md:h-[120px] lg:h-[100px] xl:h-[90px] leading-tight;
 }
 
 .download-fa-icon {

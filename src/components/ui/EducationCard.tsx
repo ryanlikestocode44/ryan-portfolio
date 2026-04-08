@@ -9,19 +9,35 @@ const EducationCard: FC<EducationCardProps> = React.memo(
       <motion.div
         initial={{
           opacity: 0,
-          x: side === "right" ? -80 : 80,
+          x: side === "right" ? -80 : 80
         }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ delay: index * 0.1 }}
-        className={`flex items-start justify-center gap-4 md:gap-8 ${
-          side === "right" ? "" : "flex-row-reverse"
+        className={`flex items-start sm:justify-center gap-4 md:gap-8 flex-col ${
+          side === "right" ? "sm:flex-row" : "sm:flex-row-reverse"
         }`}
         role="article"
       >
+        {/* Compact Image */}
+        <div
+          className={`${side === "right" ? "order-2 md:pl-2" : "order-1 md:pr-2"} flex-shrink-0`}
+        >
+          <motion.div whileHover={{ scale: 1.08 }} className="education-img">
+            <img
+              src={education.image}
+              alt={education.institution}
+              className="w-full h-full object-cover rounded-xl brightness-110 hover:brightness-120 transition-all duration-300"
+              loading="lazy"
+            />
+          </motion.div>
+        </div>
+
         {/* Content */}
         <div
-          className={`${side === "right" ? "md:pr-3 text-right" : "md:pl-3 text-left"} flex-1 max-w-md`}
+          className={`${
+            side === "right" ? "order-2 pl-2" : "order-1 pr-2"
+          } flex-shrink-0 w-full md:w-auto ${side === "right" ? "md:pr-3 text-right" : "md:pl-3 text-left"} flex-1 max-w-md`}
         >
           <motion.div
             whileHover={{ scale: 1.02, y: -2 }}
@@ -33,9 +49,7 @@ const EducationCard: FC<EducationCardProps> = React.memo(
                 {education.institution}
               </h3>
               {education.gpa && education.type === "university" && (
-                <span className="education-gpa">
-                  {education.gpa}
-                </span>
+                <span className="education-gpa">{education.gpa}</span>
               )}
             </div>
 
@@ -58,12 +72,12 @@ const EducationCard: FC<EducationCardProps> = React.memo(
             <div className="mt-4 pt-4 border-t border-black/10 dark:border-white/10">
               <span
                 className={`px-3 py-1 rounded-full text-xs font-medium border transition-all duration-200 ${
-    education.type === "school"
-      ? "bg-orange-100 dark:bg-orange-500/20 text-orange-800 dark:text-orange-300 border-orange-200 dark:border-orange-500/30"
-      : education.type === "university"
-        ? "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-200 dark:border-emerald-500/30"
-        : "bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300 border-purple-200 dark:border-purple-500/30"
-  }`}
+                  education.type === "school"
+                    ? "bg-orange-100 dark:bg-orange-500/20 text-orange-800 dark:text-orange-300 border-orange-200 dark:border-orange-500/30"
+                    : education.type === "university"
+                      ? "bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border-emerald-200 dark:border-emerald-500/30"
+                      : "bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300 border-purple-200 dark:border-purple-500/30"
+                }`}
               >
                 {education.type === "school"
                   ? "High School"
@@ -72,20 +86,6 @@ const EducationCard: FC<EducationCardProps> = React.memo(
                     : "Bootcamp"}
               </span>
             </div>
-          </motion.div>
-        </div>
-
-        {/* Compact Image */}
-        <div
-          className={`${side === "right" ? "md:pl-2" : "md:pr-2"} flex-shrink-0`}
-        >
-          <motion.div whileHover={{ scale: 1.08 }} className="education-img">
-            <img
-              src={education.image}
-              alt={education.institution}
-              className="w-full h-full object-cover rounded-xl brightness-110 hover:brightness-120 transition-all duration-300"
-              loading="lazy"
-            />
           </motion.div>
         </div>
       </motion.div>

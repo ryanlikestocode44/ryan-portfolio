@@ -1,44 +1,153 @@
-🚀 Ryan Nicholas Purba
-Frontend Developer & Full Stack Engineer
-Crafting pixel-perfect digital experiences with clean code, modern design, and icy aesthetics. Passionate about React, Tailwind, and building responsive, performant web applications that delight users.
+🇮🇩 Bahasa Indonesia
 
-✨ Portfolio Features
-This personal portfolio showcases modern web development with a stunning icy aqua theme that seamlessly switches between light and dark modes. Built with cutting-edge tools and smooth animations.
+# 🚀 Ryan Nicholas Purba
 
-Tech Stack
-- Frontend: React 18 + TypeScript
-- Styling: Tailwind CSS + Custom CSS Vars
-- Animations: Framer Motion
-- Icons: React Icons
-- Typewriter: React Type Animation
-- Active Section: Custom Intersection Observer
-- Dark Mode: Custom ThemeProvider + data-theme
-- Responsive: Mobile-first design
-- Performance: Optimized images + lazy loading
+Frontend Developer | Full Stack Engineer | Digital Designer
 
-Key Features
-- Responsive Design - Perfect on mobile, tablet, desktop
-- Smooth Animations - Framer Motion stagger + spring
-- Theme System - Light/Dark with icy aqua reverse palette
-- Mobile Sidebar - Burger menu with overlay
-- Active Section Highlight - Scroll-based nav
-- Glass Morphism - Backdrop blur effects
-- Performance Optimized - Lazy images + code splitting
+Lulusan S1 Informatika (IPK 3.87) dengan pengalaman dalam pengembangan aplikasi web dan perancangan antarmuka pengguna (UI). Terbiasa menggunakan HTML, CSS, JavaScript, React.js, dan Node.js untuk membangun aplikasi modern berbasis web, serta memiliki kemampuan desain UI menggunakan Figma.
 
-🎨 Design System
-- Primary: #C9FBFF (frozen-water)
-- Secondary: #C2FCF7 (icy-aqua)  
-- Accent: #85BDBF (pearl-aqua)
-- Border: #57737A (blue-slate)
-- Background: #040F0F (ink-black)
-- Light Mode: frozen-water BG → ink-black text
-- Dark Mode: ink-black BG → frozen-water text
+Mampu bekerja dalam tim, berkomunikasi secara efektif, dan mengintegrasikan aspek teknis serta visual dalam pengembangan produk digital.
 
-🚀 Getting Started
+---
+
+## ✨ Tentang Portfolio
+
+Portfolio ini menampilkan pengembangan web modern dengan tema **icy aqua** yang unik, dilengkapi dengan dukungan **light & dark mode** serta animasi yang halus dan interaktif.
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend**: React 18 + TypeScript  
+- **Styling**: Tailwind CSS + Custom CSS Variables  
+- **Animations**: Framer Motion  
+- **Icons**: React Icons  
+- **Typewriter Effect**: React Type Animation  
+- **State & Behavior**:
+  - Custom Intersection Observer (Active Section)
+  - ThemeProvider (Dark Mode)
+- **Performance**:
+  - Lazy Loading
+  - Optimized Images
+
+---
+
+## 🌟 Fitur Utama
+
+- 📱 Responsive Design (Mobile, Tablet, Desktop)
+- 🎬 Smooth Animations (Framer Motion)
+- 🌗 Light/Dark Mode dengan custom theme
+- 📌 Active Section Navigation (scroll tracking)
+- 📂 Mobile Sidebar (burger menu + overlay)
+- 🧊 Glass Morphism UI
+- ⚡ Optimasi performa (lazy load & code splitting)
+
+---
+
+## 🎨 Design System
+
+| Element     | Color       |
+|------------|------------|
+| Primary    | #C9FBFF (Frozen Water) |
+| Secondary  | #C2FCF7 (Icy Aqua) |
+| Accent     | #85BDBF (Pearl Aqua) |
+| Border     | #57737A (Blue Slate) |
+| Background | #040F0F (Ink Black) |
+
+**Mode Behavior:**
+- Light Mode → Background terang, teks gelap  
+- Dark Mode → Background gelap, teks terang  
+
+---
+
+## 🚀 Getting Started
+```bash
+# Clone repository
+git clone https://github.com/ryanlikestocode44/portfolio.git
+
+# Masuk ke folder project
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Jalankan development server
+npm run dev
+
+# Build untuk production
+npm run build
+```
+
+---------------------------------------------------------------------------------
+
+🇺🇸 English
+# 🚀 Ryan Nicholas Purba
+
+Frontend Developer | Full Stack Engineer | Digital Designer
+
+Bachelor of Informatics graduate (GPA 3.87) with experience in web application development and user interface (UI) design. Skilled in HTML, CSS, JavaScript, React.js, and Node.js for building modern web applications, along with UI design expertise using Figma.
+
+A collaborative team player with strong communication skills, capable of blending technical and visual aspects to deliver high-quality digital products.
+
+---
+
+## ✨ About This Portfolio
+
+This portfolio showcases modern web development with a unique **icy aqua theme**, featuring seamless **light and dark mode switching** and smooth, interactive animations.
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend**: React 18 + TypeScript  
+- **Styling**: Tailwind CSS + Custom CSS Variables  
+- **Animations**: Framer Motion  
+- **Icons**: React Icons  
+- **Typewriter Effect**: React Type Animation  
+- **State & Behavior**:
+  - Custom Intersection Observer (Active Section)
+  - ThemeProvider (Dark Mode)
+- **Performance**:
+  - Lazy Loading
+  - Optimized Images
+
+---
+
+## 🌟 Key Features
+
+- 📱 Fully Responsive Design  
+- 🎬 Smooth Animations (Framer Motion)  
+- 🌗 Light/Dark Mode with custom theme system  
+- 📌 Scroll-based Active Section Highlight  
+- 📂 Mobile Sidebar Navigation  
+- 🧊 Glass Morphism UI Effects  
+- ⚡ Performance Optimized  
+
+---
+
+## 🎨 Design System
+
+| Element     | Color       |
+|------------|------------|
+| Primary    | #C9FBFF (Frozen Water) |
+| Secondary  | #C2FCF7 (Icy Aqua) |
+| Accent     | #85BDBF (Pearl Aqua) |
+| Border     | #57737A (Blue Slate) |
+| Background | #040F0F (Ink Black) |
+
+**Mode Behavior:**
+- Light Mode → Light background, dark text  
+- Dark Mode → Dark background, light text  
+
+---
+
+## 🚀 Getting Started
 
 ```bash
-# Clone repo
+# Clone repository
 git clone https://github.com/ryanlikestocode44/portfolio.git
+
+# Navigate to project
 cd portfolio
 
 # Install dependencies
@@ -50,32 +159,3 @@ npm run dev
 # Build for production
 npm run build
 ```
-
-📱 Responsive Breakpoints
-- Mobile: < 640px  - Sidebar + stacked
-- Tablet: 640-1024px - Hybrid layout
-- Desktop: >1024px  - Full horizontal
-
-🎭 Animations
-- Hero typewriter + stagger
-- Navbar slide-in sidebar
-- Cards hover lift + glow
-- Profile image inset shadow
-- Section reveals
-
-🔧 Customization
-1. Edit colors in index.css CSS vars
-2. Update sections in App.tsx
-3. Change profile image in assets/img
-4. Modify links in Navbar sections
-5. Adjust TypeAnimation sequence
-
-📈 Performance
-✅ Lighthouse 95+ scores
-✅ Bundle analyzer optimized
-✅ Images optimized (WebP)
-✅ Lazy loading sections
-✅ CSS purge (Tailwind)
-✅ Tree shaking
-
-<div align="center"> <br /> <a href="https://github.com/ryanlikestocode44"> <img src="https://img.shields.io/github/followers/ryanlikestocode44?label=GitHub&style=social" alt="GitHub followers" /> </a> <a href="https://linkedin.com/in/ryan-nicholas-purba"> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=social&logo=linkedin&logoColor=white" alt="LinkedIn" /> </a> <p> <em>© 2024 Ryan Nicholas Purba. Built with ❤️ using React, Tailwind CSS, and Framer Motion.</em> </p> </div>
