@@ -17,9 +17,19 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          icons: ["./src/assets/icons/*.png"],
+          vendor: ["react", "react-dom"],
+        },
+        chunkFileNames: "chunks/[name]-[hash].js",
+        entryFileNames: "[name]-[hash].js",
+        assetFileNames: ({ name }) => {
+          if (/\.(webp|png|jpe?g|svg)$/.test(name ?? ""))
+            return "assets/icons/[name]-[hash][extname]";
+          return "assets/[name]-[hash][extname]";
         },
       },
     },
+  },
+  optimizeDeps: {
+    exclude: [],
   },
 });
