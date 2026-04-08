@@ -39,7 +39,7 @@ const ScrollToTop: FC = () => {
             className="scroll-to-top-btn"
             aria-label="Scroll to top"
           >
-            <FaArrowUp className="text-[#040f0f] dark:text-[#C9FBFF] text-base md:text-lg group-hover:text-[#A3E5E7] group-hover:dark:text-[#85BDBF] transition-colors" />
+            <FaArrowUp className="scroll-to-top-icon" />
           </motion.button>
         </motion.div>
       )}

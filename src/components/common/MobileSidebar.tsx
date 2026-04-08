@@ -38,14 +38,9 @@ const MobileSidebar: FC<MobileSidebarProps> = ({ isOpen, onClose }) => {
             className="sidebar"
           >
             {/* Header */}
-            <div className="p-6 border-b border-[#57737A]/30 sticky top-0 bg-[#c9fbff]/95 dark:bg-[#040F0F]/95 backdrop-blur-xl z-10">
+            <div className="sidebar-header">
               <div className="flex items-center justify-between mb-6">
-                <div
-                  className="text-2xl font-bold bg-gradient-to-r 
-                  from-[#040f0f] to-[#040f0f] dark:from-[#85BDBF] dark:to-[#57737A] bg-clip-text text-transparent"
-                >
-                  Ryan Portfolio
-                </div>
+                <div className="sidebar-header-title">Ryan Portfolio</div>
 
                 <motion.button
                   onClick={onClose}

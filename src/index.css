@@ -33,6 +33,14 @@
   @apply p-2 rounded-xl bg-[#040f0f]/20 dark:bg-[#C2FCF7]/20 border border-[#040f0f]/40 dark:border-[#C2FCF7]/40 hover:bg-[#57737a]/40 hover:border-[#040f0f]/60 hover:dark:bg-[#C2FCF7]/40 hover:dark:border-[#85BDBF]/60 transition-all duration-200 flex items-center justify-center;
 }
 
+.sidebar-header {
+  @apply p-6 border-b border-[#57737A]/30 sticky top-0 bg-[#c9fbff]/95 dark:bg-[#040F0F]/95 backdrop-blur-xl z-10;
+}
+
+.sidebar-header-title {
+  @apply text-2xl font-bold bg-gradient-to-r from-[#040f0f] to-[#040f0f] dark:from-[#85BDBF] dark:to-[#57737A] bg-clip-text text-transparent;
+}
+
 .mobile-burger {
   @apply md:hidden p-2.5 rounded-xl bg-[#c9fbff]/70 dark:bg-[#040F0F]/70 backdrop-blur-xl border border-[#85bdbf]/60 hover:border-[#57737a]/80 dark:border-[#57737A]/60 hover:dark:border-[#C2FCF7]/80 hover:bg-[#c9fbff]/90 hover:dark:bg-[#040F0F]/90 shadow-lg hover:shadow-[#57737a]/40 hover:dark:shadow-[#C2FCF7]/40 transition-all duration-300 z-50;
 }
@@ -149,7 +157,7 @@
 }
 
 .contact-card-content {
-  @apply text-[#57737a] hover:text-[#57737a] dark:text-[#85BDBF] hover:dark:text-[#C2FCF7] text-sm md:text-md font-medium block transition-colors duration-300 line-clamp-1 group-hover:underline;
+  @apply text-[#57737a] hover:text-[#57737a] dark:text-[#85BDBF] hover:dark:text-[#C2FCF7] text-sm font-medium block transition-colors duration-300 line-clamp-1 group-hover:underline;
 }
 
 /* Footer */
@@ -168,4 +176,8 @@
 /* Scroll To Top Button */
 .scroll-to-top-btn {
   @apply cursor-pointer p-3 md:p-3.5 bg-gradient-to-br from-[#c2fcf7]/90 to-[#c9fbff]/50 dark:from-[#040F0F]/90 dark:to-[#57737A]/50 backdrop-blur-xl rounded-xl border border-[#57737a]/70 hover:border-[#040F0F]/70 dark:border-[#c2fcf7]/70 hover:dark:border-[#85BDBF]/70 hover:from-[#c9fbff] hover:to-[#c2fcf7]/60 hover:dark:from-[#040F0F] hover:dark:to-[#85BDBF]/60 shadow-lg hover:shadow-[#C2FCF7]/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#040f0f]/50 focus:dark:ring-[#C2FCF7]/50;
+}
+
+.scroll-to-top-icon {
+  @apply text-[#040f0f] dark:text-[#C9FBFF] text-base md:text-lg group-hover:text-[#A3E5E7] group-hover:dark:text-[#85BDBF] transition-colors;
 }
