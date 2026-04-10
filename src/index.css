@@ -80,7 +80,7 @@
 
 /* Skill Section */
 .skill-card {
-  @apply relative overflow-hidden rounded-2xl bg-[#040f0f]/8 dark:bg-[#edfeff]/8 backdrop-blur-xl border border-[#040f0f]/20 dark:border-[#edfeff]/20 hover:border-[#040f0f]/40 hover:dark:border-[#edfeff]/40 hover:bg-[#040f0f]/15 hover:dark:bg-[#edfeff]/15 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center p-1 sm:p-2 hover:p-2;
+  @apply relative overflow-hidden rounded-2xl bg-[#040f0f]/8 dark:bg-[#edfeff]/8 backdrop-blur-xl border border-[#040f0f]/20 dark:border-[#edfeff]/20 hover:border-[#040f0f]/40 hover:dark:border-[#edfeff]/40 hover:bg-[#040f0f]/15 hover:dark:bg-[#edfeff]/15 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center w-[20vw] sm:w-[10vw] p-1 sm:p-2 hover:p-2;
 }
 .skill-icon-wrapper {
   @apply w-14 h-14 sm:w-16 sm:h-16 mb-3 flex items-center justify-center rounded-xl bg-[#040f0f]/10 dark:bg-[#edfeff]/10 transition-all duration-300 group-hover:bg-[#040f0f]/20 dark:group-hover:bg-[#edfeff]/20;
