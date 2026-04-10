@@ -35,20 +35,24 @@ export const contactsData: ContactItem[] = [
     icon: FaEnvelope,
     label: "Email",
     value: "ryannichpurba44@gmail.com",
-    href: "mailto:ryannichpurba44@gmail.com",
+    href: "mailto:ryannichpurba44@gmail.com"
   },
   {
     icon: FaWhatsapp,
     label: "WhatsApp",
     value: "+62 878-4433-5057",
     href: "https://wa.me/6287844335057",
-    whatsapp: true,
+    whatsapp: true
   },
   {
     icon: FaPhone,
     label: "Phone",
     value: "+62 878-4433-5057",
-    href: "tel:+6287844335057",
+    href: "tel:087844335057"
   },
-  { icon: FaMapMarkerAlt, label: "Location", value: "Bekasi, Jawa Barat, Indonesia" },
+  {
+    icon: FaMapMarkerAlt,
+    label: "Location",
+    value: "Bekasi, Jawa Barat, Indonesia"
+  }
 ];

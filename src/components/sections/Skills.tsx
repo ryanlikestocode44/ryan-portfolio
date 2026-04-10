@@ -39,7 +39,7 @@ const Skills: FC = () => {
             <h3 className="text-2xl font-bold text-center text-[#040f0f] dark:text-[#edfeff] tracking-tight">
               Frontend
             </h3>
-            <div className="grid grid-cols-4 md:grid-cols-6 mx-auto gap-6">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 mx-auto gap-6">
               {skillsData.slice(0, 6).map((skill, index) => (
                 <SkillCard key={skill.name} skill={skill} index={index} />
               ))}
@@ -57,7 +57,7 @@ const Skills: FC = () => {
             <h3 className="text-2xl font-bold text-center text-[#040f0f] dark:text-[#edfeff] tracking-tight">
               Backend
             </h3>
-            <div className="grid grid-cols-2 gap-6 max-w-sm mx-auto">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 max-w-sm mx-auto">
               {skillsData.slice(6, 8).map((skill, index) => (
                 <SkillCard key={skill.name} skill={skill} index={index + 6} />
               ))}
@@ -75,7 +75,7 @@ const Skills: FC = () => {
             <h3 className="text-2xl font-bold text-center text-[#040f0f] dark:text-[#edfeff]  tracking-tight">
               Design & Tools
             </h3>
-            <div className="grid grid-cols-4 gap-6 max-w-2xl mx-auto">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 max-w-2xl mx-auto">
               {skillsData.slice(8).map((skill, index) => (
                 <SkillCard key={skill.name} skill={skill} index={index + 8} />
               ))}

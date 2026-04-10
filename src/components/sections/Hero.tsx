@@ -25,7 +25,7 @@ const Hero: FC = () => {
     >
       <div className="max-w-6xl w-full relative z-10">
         {/* MOBILE: Profile image + Content side by side */}
-        <div className="md:hidden flex items-start gap-6 mb-8">
+        <div className="md:hidden flex flex-col items-start gap-6 mb-8">
           {/* Profile Image - Circle on mobile */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -50,7 +50,7 @@ const Hero: FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="icy-text text-2xl sm:text-3xl"
+                className="icy-text"
               >
                 Hi! I'm <br />
               </motion.h1>
@@ -62,7 +62,7 @@ const Hero: FC = () => {
                   1000,
                   "Digital Designer", // Role 2
                   1000,
-                  () => {}, // Infinite loop
+                  () => {} // Infinite loop
                 ]}
                 wrapper="span"
                 speed={60}
@@ -101,32 +101,32 @@ const Hero: FC = () => {
                   className="ml-2 w-6 h-6 flex items-center justify-center transition-all duration-300"
                   animate={{
                     scale: [1, 1.5, 1],
-                    y: [0, -1, 0],
+                    y: [0, -1, 0]
                   }}
                   transition={{
                     duration: 1.4,
                     repeat: Infinity,
-                    ease: "easeInOut",
+                    ease: "easeInOut"
                   }}
                 >
                   <FaFileDownload className="download-fa-icon" />
                 </motion.span>
               </Button>
 
-              <div className="flex space-x-3 sm:space-x-4">
+              <div className="flex justify-center space-x-3 sm:space-x-4">
                 {[
                   {
                     icon: FaGithub,
-                    href: "https://github.com/ryanlikestocode44",
+                    href: "https://github.com/ryanlikestocode44"
                   },
                   {
                     icon: FaLinkedin,
-                    href: "https://www.linkedin.com/in/ryan-nicholas-purba/",
+                    href: "https://www.linkedin.com/in/ryan-nicholas-purba/"
                   },
                   {
                     icon: FaInstagram,
-                    href: "https://www.instagram.com/ryan_nicholas.44/",
-                  },
+                    href: "https://www.instagram.com/ryan_nicholas.44/"
+                  }
                 ].map(({ icon: Icon, href }, index) => (
                   <motion.a
                     key={href}
@@ -172,7 +172,7 @@ const Hero: FC = () => {
                   1000,
                   "Digital Designer", // Role 2
                   1000,
-                  () => {}, // Infinite loop
+                  () => {} // Infinite loop
                 ]}
                 wrapper="span"
                 speed={60}
@@ -211,12 +211,12 @@ const Hero: FC = () => {
                   className="ml-2 w-6 h-6 flex items-center justify-center transition-all duration-300"
                   animate={{
                     scale: [1, 1.5, 1],
-                    y: [0, -1, 0],
+                    y: [0, -1, 0]
                   }}
                   transition={{
                     duration: 1.4,
                     repeat: Infinity,
-                    ease: "easeInOut",
+                    ease: "easeInOut"
                   }}
                 >
                   <FaFileDownload className="download-fa-icon" />
@@ -227,16 +227,16 @@ const Hero: FC = () => {
                 {[
                   {
                     icon: FaGithub,
-                    href: "https://github.com/ryanlikestocode44",
+                    href: "https://github.com/ryanlikestocode44"
                   },
                   {
                     icon: FaLinkedin,
-                    href: "https://www.linkedin.com/in/ryan-nicholas-purba/",
+                    href: "https://www.linkedin.com/in/ryan-nicholas-purba/"
                   },
                   {
                     icon: FaInstagram,
-                    href: "https://www.instagram.com/ryan_nicholas.44/",
-                  },
+                    href: "https://www.instagram.com/ryan_nicholas.44/"
+                  }
                 ].map(({ icon: Icon, href }, index) => (
                   <motion.a
                     key={href}
