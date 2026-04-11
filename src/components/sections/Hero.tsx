@@ -260,7 +260,7 @@ const Hero: FC = () => {
             initial={{ opacity: 0, scale: 0.9, x: 50 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.3 }}
-            className="w-full h-[300px] lg:h-[500px] group relative overflow-hidden"
+            className="relative w-full h-[420px] lg:h-[520px] overflow-hidden rounded-3xl group"
           >
             <img
               src={profileImg}
@@ -270,6 +270,8 @@ const Hero: FC = () => {
               fetchPriority="high"
               draggable={false}
             />
+            {/* ✅ BOTTOM GRADIENT OVERLAY */}
+            <div className="profile-gradient"></div>
           </motion.div>
         </div>
       </div>
